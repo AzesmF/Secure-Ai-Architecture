@@ -1,4 +1,4 @@
 title: "Архитектура Безопасного ИИ"
 theme: jekyll-theme-cayman
-include: ["book.md", "README.md"]
-permalink: pretty
+include: ["book.md", "index.md"]
+exclude: ["README.md"]
