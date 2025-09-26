@@ -1,0 +1,4 @@
+title: "Архитектура Безопасного ИИ"
+theme: jekyll-theme-cayman
+include: ["book.md"]
+exclude: ["README.md"]
