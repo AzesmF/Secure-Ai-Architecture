@@ -1,3 +1,9 @@
+<!--
+COMMERCIAL LICENSE NOTICE
+Secure AI Architecture - Copyright (c) 2025 Павел Сергеевич Фенин
+This content is protected by commercial license. Unauthorized use prohibited.
+Contact: azesmf@yandex.ru for licensing.
+-->
 # КОММЕРЧЕСКАЯ ЛИЦЕНЗИЯ НА КОНТЕНТ
 ## "Secure AI Architecture: Техники защиты при взаимодействии с ИИ"
 

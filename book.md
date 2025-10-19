@@ -1,3 +1,24 @@
+# Secure AI Architecture
+## Техники защиты при взаимодействии с ИИ
+
+**Автор:** Павел Сергеевич Фенин  
+**Лицензия:** Коммерческая  
+**Контакты:** azesmf@yandex.ru | Telegram: @azesmf
+
+---
+### ⚠️ КОММЕРЧЕСКАЯ ЛИЦЕНЗИЯ
+Этот контент защищен коммерческой лицензией. Любое копирование, распространение или коммерческое использование без приобретения лицензии запрещено и преследуется по закону.
+
+Полный текст лицензии: [COMMERCIAL_LICENSE.md](COMMERCIAL_LICENSE.md)
+
+---
+
+<!--
+COMMERCIAL LICENSE NOTICE
+Secure AI Architecture - Copyright (c) 2025 Павел Сергеевич Фенин
+This content is protected by commercial license. Unauthorized use prohibited.
+Contact: azesmf@yandex.ru for licensing.
+-->
 ---
 layout: default
 title: "Полный текст книги"

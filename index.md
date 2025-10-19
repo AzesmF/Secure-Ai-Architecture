@@ -1,5 +1,24 @@
 ---
 layout: default
+title: "Secure AI Architecture"
+description: "Техники защиты при взаимодействии с ИИ - Коммерческий контент"
+license_warning: true
+---
+
+<div class="license-notice" style="border: 2px solid #ff4444; padding: 15px; margin: 20px 0; background: #fff0f0;">
+<strong>⚠️ КОММЕРЧЕСКАЯ ЛИЦЕНЗИЯ</strong><br>
+Этот контент защищен авторским правом. Запрещено копирование, распространение и коммерческое использование без лицензии.<br>
+<strong>Контакты для лицензирования:</strong> azesmf@yandex.ru
+</div>
+
+<!--
+COMMERCIAL LICENSE NOTICE
+Secure AI Architecture - Copyright (c) 2025 Павел Сергеевич Фенин
+This content is protected by commercial license. Unauthorized use prohibited.
+Contact: azesmf@yandex.ru for licensing.
+-->
+---
+layout: default
 title: "Архитектура Безопасного ИИ"
 ---
 
