@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>VK Auth</title>
-    <script src="https://unpkg.com/crypto-js@4.1.1/crypto-js.js"></script>
 </head>
 <body>
     <div id="auth-container">
@@ -11,7 +10,7 @@
     </div>
 
     <script>
-        // Генерация code_verifier (43-128 символов)
+        // Генерация code_verifier
         function generateCodeVerifier() {
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
             let result = '';
@@ -21,7 +20,7 @@
             return result;
         }
 
-        // Генерация code_challenge (SHA256 + Base64)
+        // Генерация code_challenge
         async function generateCodeChallenge(verifier) {
             const encoder = new TextEncoder();
             const data = encoder.encode(verifier);
@@ -37,11 +36,11 @@
             const codeChallenge = await generateCodeChallenge(codeVerifier);
             const state = Math.random().toString(36).substring(7);
 
-            // Сохраняем для последующего использования
+            // Сохраняем для использования
             sessionStorage.setItem('code_verifier', codeVerifier);
             sessionStorage.setItem('state', state);
 
-            // Формируем URL авторизации
+            // URL авторизации
             const authUrl = new URL('https://id.vk.com/authorize');
             authUrl.searchParams.append('client_id', '54235050');
             authUrl.searchParams.append('redirect_uri', 'https://azesmf.github.io/Secure-Ai-Architecture/vk-auth/');
@@ -54,7 +53,7 @@
             window.location.href = authUrl.toString();
         }
 
-        // Проверяем, есть ли code в URL (возврат из VK ID)
+        // Проверяем возврат из VK ID
         function checkReturnFromVK() {
             const urlParams = new URLSearchParams(window.location.search);
             const code = urlParams.get('code');
@@ -64,15 +63,15 @@
                 const savedState = sessionStorage.getItem('state');
                 if (state === savedState) {
                     const codeVerifier = sessionStorage.getItem('code_verifier');
-                    exchangeCodeForToken(code, codeVerifier);
+                    sendToWebhook(code, codeVerifier);
                 }
             }
         }
 
-        // Обмен code на token через Pipedream
-        async function exchangeCodeForToken(code, codeVerifier) {
+        // Отправляем данные на webhook.site для теста
+        async function sendToWebhook(code, codeVerifier) {
             try {
-                const response = await fetch('ТВОЙ_PIPEDREAM_ENDPOINT', {
+                const response = await fetch('https://webhook.site/c07079d1-6249-4eaa-b3b8-dbee228bb8c2', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -80,23 +79,23 @@
                     body: JSON.stringify({
                         code: code,
                         code_verifier: codeVerifier,
-                        redirect_uri: 'https://azesmf.github.io/Secure-Ai-Architecture/vk-auth/'
+                        redirect_uri: 'https://azesmf.github.io/Secure-Ai-Architecture/vk-auth/',
+                        timestamp: new Date().toISOString()
                     })
                 });
 
-                const tokenData = await response.json();
-                if (tokenData.access_token) {
-                    document.getElementById('auth-container').innerHTML = 
-                        `<h3>✅ Успех! Token получен</h3>
-                         <p>Access Token: ${tokenData.access_token}</p>
-                         <button onclick="copyToken()">Скопировать token</button>`;
-                }
+                document.getElementById('auth-container').innerHTML = 
+                    `<h3>✅ Данные отправлены на webhook</h3>
+                     <p>Code: ${code}</p>
+                     <p>Check webhook.site for received data</p>`;
             } catch (error) {
                 console.error('Ошибка:', error);
+                document.getElementById('auth-container').innerHTML = 
+                    `<h3>❌ Ошибка</h3><p>${error.message}</p>`;
             }
         }
 
-        // Запускаем проверку при загрузке страницы
+        // Запускаем проверку при загрузке
         checkReturnFromVK();
     </script>
 </body>
