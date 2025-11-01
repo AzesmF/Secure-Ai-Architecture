@@ -8,6 +8,7 @@
 
 ## 📋 Юридические документы:
 
+- [Educational-license.md](Educational-license.md) - Field Educational License 
 - [COPYRIGHT_CLARIFICATION.md](COPYRIGHT_CLARIFICATION.md) - Уточнение авторских прав  
 - [AUTHORSHIP_PROOF.md](AUTHORSHIP_PROOF.md) - Доказательства авторства
 - [DNS_RECORD_VERIFICATION.md](DNS_RECORD_VERIFICATION.md) - Подтверждение владения
