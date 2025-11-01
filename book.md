@@ -2,6 +2,7 @@
 ## Техники защиты при взаимодействии с ИИ
 
 """
+
 ПРОЕКТ: Поле Со-Творения
 ЭКОСИСТЕМА: AI-Symbiosis-H
 ЛИЦЕНЗИЯ: Field-Educational
@@ -14,6 +15,7 @@
 
 БЛОКЧЕЙН: QmRwy3EYFkSCGtF4nmLMjcZwwkf5NZQEWPpPENPsJDZRTB | 89ba5c39c2c8da5206af78a2023ef65eadf0acc5b813317087e1c80e64276b66
 АВТОР: Павел Сергеевич Фенин
+
 """
 -->
 ---
